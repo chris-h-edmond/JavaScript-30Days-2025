@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding:1;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    min-width: 100vh;
+    padding: 10px;
+    background : linear-gradient(120deg, #153677, #4e085f);
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.todo-app h2 {
+    color :  #002765; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.todo-app h2 img { 
+    width : 30px ;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input {
+    flex : 1 ; 
+    border : none;
+    outline: none;
+    background: transparent;
+    padding : 10px; 
+}
+
+.row input::placeholder {
+    color: #b8b8b8;
+}
+
+.row input:focus::placeholder {
+    color: #a783e5;
+}
+
+.row button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+
+ul li { 
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 5px 7px 10px;
+    user-select: none;
+    cursor : pointer;
+    
+}
+
