@@ -9,21 +9,33 @@
 </head>
 <body>
     <div class="container">
-        
-        <div class="todo-app">
-            
-            <h2>To-Do List <img src ="images/icon.png"></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add a new task..."> 
-                <button onclick="addTask()" >Add</button>
+        <div class="drag-container">
+            <h3 class="drag-heading">Drag here :P </h3>
+            <div class="todo-app">
+                
+                <h2>To-Do List <img src ="images/icon.png"></h2>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add a new task..."> 
+                    <button onclick="addTask()" >Add</button>
+                </div>
+                <ul id="list-container">
+                        <!-- <li class="checked">Task1</li>
+                        <li>Task1</li>
+                        <li>Task1</li> -->
+                </ul>
+                
+                <button id="remove-all" style="margin-top: 20px;">Remove All</button>
             </div>
-            <ul id="list-container">
-                    <!-- <li class="checked">Task1</li>
-                    <li>Task1</li>
-                    <li>Task1</li> -->
-            </ul>
-            
-            <button id="remove-all" style="margin-top: 20px;">Remove All</button>
+        </div>
+
+
+        <!-- SOCIALS -->
+        <div class="watermark">
+            <h3>Chris Harris Edmond</h3> <!-- Replace 'Your Name' with your actual name -->
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/chrisharrisedmond" target="_blank">LinkedIn</a>
+                <a href="https://github.com/chris-h-edmond" target="_blank">GitHub</a>
+            </div>
         </div>
     </div>
 

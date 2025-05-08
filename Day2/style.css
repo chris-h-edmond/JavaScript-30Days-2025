@@ -13,18 +13,51 @@
     background : linear-gradient(120deg, #153677, #4e085f);
     
 }
+.drag-container {
+    position: absolute;
+    width: calc(100% + 20px); /* Slightly larger than .todo-app */
+    max-width: 560px; /* Match .todo-app's max-width + border */
+    padding: 20px; /* Space for the draggable border */
+    border: 4px dashed #ad64ed; /* Distinct dashed border with a bright color */
+    border-radius: 25px; /* Rounded corners for a modern look */
+    background: rgba(255, 204, 0, 0.1); /* Subtle background to make it stand out */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
+    cursor: grab; /* Indicate draggable area */
+    z-index: 1000; /* Ensure it stays on top */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.drag-heading {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ad64ed; /* Match the border color */
+    margin-bottom: 10px; /* Add spacing below the heading */
+    user-select: none; /* Prevent text selection */
+}
+
+.drag-container:active {
+    cursor: grabbing; /* Change cursor when dragging */
+}
 
 .todo-app {
+    position: relative;
     width: 100%;
     max-width: 540px;
-    margin: 100px auto 20px;
     padding: 40px 30px 70px;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: grab; /* Default cursor for draggable elements */
-    position: absolute; /* Required for dragging */
-    z-index: 1000; /* Ensure it stays on top while dragging */
+    box-shadow: none; /* Remove shadow from .todo-app */
+}
+
+.todo-app {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    padding: 40px 30px 70px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds an inner shadow */
 }
 
 .todo-app h2 {
@@ -197,3 +230,45 @@ ul li span:hover {
     box-shadow: 0 2px 4px rgba(18, 36, 109, 0.4);
 }
 
+
+.watermark {
+    position: absolute; /* Required for dragging */
+    top: 10px; /* Initial position */
+    left: 50%; /* Initial position */
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Lexend', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    user-select: none;
+    cursor: grab; /* Indicate draggable area */
+    transition: all 0.3s ease;
+}
+
+.watermark h3 {
+    margin: 0 0 5px 0; /* Add spacing below the heading */
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffcc00; /* Bright color for the name */
+}
+
+.watermark .socials a {
+    user-select: none;
+    color: #ffcc00; /* Bright color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0 10px; /* Add spacing between links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.watermark .socials a:hover {
+    user-select: none;
+    color: #ffffff; /* Change link color on hover */
+    
+}
