@@ -3,6 +3,8 @@
     padding:2;
     box-sizing: border-box;
     font-family: 'Lexend', sans-serif;
+    user-select: none;
+    
 }
 
 .container{
@@ -271,4 +273,105 @@ ul li span:hover {
     user-select: none;
     color: #ffffff; /* Change link color on hover */
     
+}
+
+
+/* General Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 5px;
+    }
+
+    .drag-container {
+        width: 100%; /* Adjust width for smaller screens */
+        max-width: 100%; /* Remove fixed max-width */
+        padding: 15px; /* Reduce padding */
+        border-radius: 15px; /* Slightly smaller rounded corners */
+    }
+
+    .todo-app {
+        padding: 20px 15px 50px; /* Reduce padding */
+        border-radius: 10px; /* Smaller rounded corners */
+    }
+
+    .todo-app h2 {
+        font-size: 20px; /* Adjust heading size */
+        margin-bottom: 15px;
+    }
+
+    .row input {
+        padding: 8px; /* Reduce padding */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .row button {
+        padding: 10px 20px; /* Reduce button size */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    ul li {
+        font-size: 14px; /* Adjust list item font size */
+        padding: 10px 5px 10px 40px; /* Reduce padding */
+    }
+
+    ul li span {
+        width: 25px; /* Adjust delete button size */
+        height: 25px;
+        font-size: 18px; /* Adjust font size */
+        line-height: 25px;
+    }
+
+    #remove-all {
+        padding: 10px 20px; /* Reduce button size */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .watermark {
+        font-size: 12px; /* Adjust watermark font size */
+        padding: 8px 15px; /* Reduce padding */
+        border-radius: 10px; /* Smaller rounded corners */
+    }
+
+    .watermark h3 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .watermark .socials a {
+        font-size: 12px; /* Adjust link size */
+        margin: 0 5px; /* Reduce spacing between links */
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-app h2 {
+        font-size: 18px; /* Further reduce heading size */
+    }
+
+    .row input {
+        font-size: 12px; /* Further reduce input font size */
+    }
+
+    .row button {
+        font-size: 12px; /* Further reduce button font size */
+    }
+
+    ul li {
+        font-size: 12px; /* Further reduce list item font size */
+    }
+
+    ul li span {
+        font-size: 16px; /* Further reduce delete button font size */
+    }
+
+    #remove-all {
+        font-size: 12px; /* Further reduce button font size */
+    }
+
+    .watermark h3 {
+        font-size: 16px; /* Further reduce heading size */
+    }
+
+    .watermark .socials a {
+        font-size: 10px; /* Further reduce link size */
+    }
 }
