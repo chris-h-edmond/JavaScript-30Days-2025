@@ -22,7 +22,9 @@
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+    cursor: grab; /* Default cursor for draggable elements */
+    position: absolute; /* Required for dragging */
+    z-index: 1000; /* Ensure it stays on top while dragging */
 }
 
 .todo-app h2 {
@@ -76,13 +78,20 @@
     font-weight: 600;
     cursor: pointer;
     border-radius: 40px;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .row button:hover {
-    background:  #8945ff;
-    box-shadow: 0 4px 8px rgba(18, 36, 109, 0.6); /* Adds an inner shadow */
+    background: #8945ff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(18, 36, 109, 0.6);
 }
 
+
+.row button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(18, 36, 109, 0.4);
+}
 
 ul li { 
     list-style: none;
@@ -92,6 +101,8 @@ ul li {
     cursor : pointer;
     position: relative;
     margin-right: 50px;
+    transition: opacity 0.3s ease, height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+
 }
 
 
@@ -107,18 +118,32 @@ ul li::before {
     line-height: 30px;
     top : 10px;
     left : 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+ul li:hover::before {
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(18, 36, 109, 0.151);
 }
 
 
 ul li.checked {
     color : #555; 
     text-decoration: line-through;
+    transition: background 0.3s ease, transform 0.2s ease;
+    
 
 }
 
 ul li.checked::before {
     background-image: url(images/checked.png);
+    
+    transition: background 0.3s ease, transform 0.2s ease;
 }
+
 
 ul li span { 
     position: absolute;
@@ -130,14 +155,45 @@ ul li span {
     color : #555;
     line-height: 30px;
     text-align: center;
-    
+    border-radius: 40%;
+    transition: background 0.3s ease, transform 0.2s ease;
+
 
 }
 
 ul li span:hover { 
     background: #c1c1c1;
     color : #ffffff; 
-    border-radius: 30%;
+    border-radius: 40%;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(18, 36, 109, 0.6);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(18, 36, 109, 0.6);
 }
+
+
+/* Style for the Remove All button */
+#remove-all {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#remove-all:hover {
+    background: #8945ff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(18, 36, 109, 0.6);
+}
+
+#remove-all:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(18, 36, 109, 0.4);
+}
+
