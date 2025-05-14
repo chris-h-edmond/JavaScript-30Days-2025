@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lexend, sans-serif;
+
+}
+
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0 ; 
+}
+
+body {
+    background: linear-gradient(60deg, rgb(0, 0, 0), rgb(95, 0, 95));
+}
+
+.app{
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0 ;
+    border-radius: 15px;
+    padding: 30px;
+
+}
+
+.app h1 {
+    font-size: 25px;
+    color: #340034;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+
+}
+
+.quiz{ 
+    padding : 20px 0;
+
+}
+
+.quiz h2{
+    font-size: 18px;
+    color: #340034;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.btn { 
+    background: white;
+    color : #340034 ;
+    font-weight: 500;
+    width: 100% ;
+    border: 1px solid #222;
+    padding : 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+
+}
+
+.btn:hover{
+    background: #222;
+    color : #fff; 
+    scale: 1.02;
+}
+
+#next-btn{
+    background: #340034;
+    color : white;
+    font-weight: 500;
+    border: none;
+    width: 150px;
+    padding: 10px;
+    margin : 15px auto 0;
+    border-radius: 5px;
+    cursor: pointer ;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#next-btn:hover{
+    background: #5a005a;
+    color : #fff; 
+    scale: 1.05;
+}
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+    
